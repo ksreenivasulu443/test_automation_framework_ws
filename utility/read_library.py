@@ -20,7 +20,7 @@ def read_files(file_type, file_path, header=0, sep=','):
     return df
 
 
-def read_db(database_type,query, creds_file, env='qa'):
+def read_db(query, creds_file, env='qa'):
     creds = pd.read_excel(creds_file)
     print("creds", creds)
     print("creds", creds.query(f"database_type == '{env}' "))
